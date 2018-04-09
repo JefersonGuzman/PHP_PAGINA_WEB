@@ -50,8 +50,7 @@
 		    <h1>FORMULARIO DE CONTACTO</h1>
                    <form action="Enviado.php" method="GET">
                  
-                       
-                        <p>Nombre </p>                         
+                          <p>Nombre </p>                         
                         
                         <input type="text" name="nombre" class="nombre <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Nombre <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>">
                         	
@@ -71,6 +70,7 @@
                         
                         <textarea  name="textoAsunto" class="textoAsunto <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Mensaje <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>"></textarea>
                         <input type="submit">
+                     
                  
                     </form>
               </div>

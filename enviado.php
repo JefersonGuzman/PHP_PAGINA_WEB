@@ -14,12 +14,6 @@
     }else{
           $nombre = $_GET["nombre"];
     }
-
-    if (!ctype_alpha($_GET["nombre_personal"])){
-          $msjerror ="&error1=$error";
-    }else{
-          $nombre_personal = $_GET["nombre_personal"];
-    }
     
     if (!ctype_alpha($_GET["apellido"])){
           $msjerror ="&error1=$error";
