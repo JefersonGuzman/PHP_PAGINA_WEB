@@ -1,3 +1,38 @@
+<?php
+    $nombre= $_GET['nombre'];
+    $apellido = $_GET['apellido'];
+    $email= $_GET['email'];
+    $asunto = $_GET['asunto'];
+    $textoAsunto = $_GET['textoAsunto'];
+    $nombre_personal = $_GET["nombre_personal"];
+
+
+    $error="Ingrese Solo Texto";
+
+    if (!ctype_alpha($_GET["nombre"])){
+          $msjerror ="&error1=$error";
+    }else{
+          $nombre = $_GET["nombre"];
+    }
+
+    if (!ctype_alpha($_GET["nombre_personal"])){
+          $msjerror ="&error1=$error";
+    }else{
+          $nombre_personal = $_GET["nombre_personal"];
+    }
+    
+    if (!ctype_alpha($_GET["apellido"])){
+          $msjerror ="&error1=$error";
+    }else{
+          $apellido = $_GET["apellido"];
+    }
+
+    if (isset($msjerror)){
+      header("location: no-sidebar.php?".$msjerror);
+    }
+  
+
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -14,7 +49,6 @@
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/estilo.css">
 		</noscript>
 	</head>
 	<body>
@@ -47,33 +81,15 @@
 		<div id="main">
 			<div id="content" class="container">
 		  <!-- FORMULARIO -->
-		    <h1>FORMULARIO DE CONTACTO</h1>
-                   <form action="Enviado.php" method="GET">
-                 
-                       
-                        <p>Nombre </p>                         
-                        
-                        <input type="text" name="nombre" class="nombre <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Nombre <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>">
-                        	
-                        <p>Apellido</p>
-                        
-                         <input type="text" name="apellido" class="apellido <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="apellido <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>">
-                        
-                        
-                        <p>Correo Electronico</p>
-                        
-                        <input type="text" name="email" class="Email <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Email <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>">
-                                                                       
-                                                                     
-                        
-                        <p>Asunto</p>
-                         <input type="text" name="asunto" class="asunto <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Asunto <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>">
-                        
-                        <textarea  name="textoAsunto" class="textoAsunto <?php if(isset($_GET['error1'])) echo'error';?>" placeholder="Mensaje <?php if (isset($_GET['error1'])) echo $_GET['error1'];?>"></textarea>
-                        <input type="submit">
-                 
-                    </form>
+		    <h1>Muchas Gracais !!</h1>
+                <?php 
+                    echo "<h1> $nombre $apellido </h1>";
+                    ?>
+                <br>
+                <h4>Tu Mensaje se respondera lo mas rapido posible</h4>
+            
               </div>
+              
         </div>
 		    	
              
